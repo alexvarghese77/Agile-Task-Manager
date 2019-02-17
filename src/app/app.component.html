@@ -1,21 +1,40 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="login">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="row loginContainer">
+          <div class="col-md-6">
+            <ul>
+              <a href="#" class="selected">Sign in</a>
+              <a href="#">/ Sign Up</a>
+            </ul>
+            <label for="username" class="label control-label">User name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              placeholder="User Name"
+            />
+            <label for="password" class="label control-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="Password"
+            />
+            <input type="checkbox" name="" id="" /><small> Remember me</small>
+            <a href="">
+              <div class="btn btn-info">Sign In</div>
+            </a>
+            <p class="forgotpass text-center">Forgot password</p>
+          </div>
+          <div class="col-md-6 sideimg">
+            <img src="../assets/img/sideimg.jpeg" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 "></div>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
