@@ -1,5 +1,5 @@
 .login {
-  background-image: url(../assets/img/back.jpg);
+  background-image: url(../../../assets/img/back.jpg);
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
@@ -32,6 +32,18 @@ label {
   font-weight: normal;
   color: white;
 }
+
+// Error alert
+.ng-valid[required],
+.ng-valid.required {
+  border-bottom: 2px solid #42a948; /* green */
+}
+
+.ng-invalid:not(form) {
+  border-bottom: 2px solid #a94442; /* red */
+}
+
+// default form field setup
 .form-control {
   background: transparent;
   border: 0px;
@@ -45,6 +57,11 @@ label {
   height: 30px;
   margin-bottom: 5px;
 }
+.form-control:focus {
+  outline: none;
+  border-bottom: 2px solid #f44c89;
+}
+
 .btn-info {
   width: 360px;
   background: transparent;

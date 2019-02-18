@@ -5,29 +5,48 @@
       <div class="col-md-8">
         <div class="row loginContainer">
           <div class="col-md-6">
-            <ul>
-              <a href="#" class="selected">Sign in</a>
-              <a href="#">/ Sign Up</a>
-            </ul>
-            <label for="username" class="label control-label">User name</label>
-            <input
-              type="text"
-              class="form-control"
-              name="username"
-              placeholder="User Name"
-            />
-            <label for="password" class="label control-label">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              name="password"
-              placeholder="Password"
-            />
-            <input type="checkbox" name="" id="" /><small> Remember me</small>
-            <a href="">
-              <div class="btn btn-info">Sign In</div>
-            </a>
-            <p class="forgotpass text-center">Forgot password</p>
+            <form action="" #loginForm="ngForm">
+              <ul>
+                <a href="#" class="selected">Sign in</a>
+                <a href="#">/ Sign Up</a>
+              </ul>
+              <label for="username" class="label control-label"
+                >User name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                name="username"
+                placeholder="User Name"
+                [(ngModel)]="name"
+                #username="ngModel"
+                required
+              />
+              <div
+                [hidden]="username.valid || username.pristine"
+                class="text-danger"
+              >
+                Name is required
+              </div>
+              <label for="password" class="label control-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                placeholder="Password"
+                [(ngModel)]="password"
+                required
+                #psw="ngModel"
+              />
+              <div [hidden]="psw.valid || psw.pristine" class="text-danger">
+                Password is required
+              </div>
+              <input type="checkbox" name="" id="" /><small> Remember me</small>
+              <a href="">
+                <div class="btn btn-info">Sign In</div>
+              </a>
+              <p class="forgotpass text-center">Forgot password</p>
+            </form>
           </div>
           <div class="col-md-6 sideimg">
             <img src="../assets/img/sideimg.jpeg" alt="" srcset="" />
